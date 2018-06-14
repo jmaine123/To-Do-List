@@ -1,24 +1,27 @@
 $(document).ready(function() {
 
    $("#button").click(function(){
-     var task = $("#tdl").val();
+    var task = $("#tdl").val();
      $(".results").append("<li class ='new'>"+ task + "</li>")
      $("#tdl").val(" ");
-
-  for (i = 0; i <= $(".results .new").length; i++){
-
-    var results = $(".results .new")
-        console.log(results[0])
-    $(results[i]).id = [i];
-    console.log(results[i].id)
-    }
    });
 
+       // Get the input field
+    var input = document.getElementById("tdl");
 
-
+    // Execute a function when the user releases a key on the keyboard
+    input.addEventListener("keyup", function(event) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Trigger the button element with a click
+        document.getElementById("button").click();
+      }
+    });
 
    $(function checked() {
-     $(".results").click(function(){
+     $(document).on("click", ".new", function(){
        $(this).toggleClass('check')
      });
 
