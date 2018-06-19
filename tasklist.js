@@ -50,12 +50,9 @@ $(document).ready(function() {
    });
 
    $(function removeitem(){
-      var close = document.getElementsByClassName("close");
-      var i;
       $(document).on("click", ".close", function(){
-        console.log(close);
-        //console.log(Array.indexOf(close))
-
+        var div = this.parentElement;
+        div.style.display = "none";
       })
    });
 

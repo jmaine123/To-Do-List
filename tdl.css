@@ -62,8 +62,8 @@ ol {
 .close {
   position: inherit;
   float: right;
-    right: 0;
-    top: 0;
-    padding: 12px 16px 12px 16px;
+    right: 0px;
+    top: 0px;
     color: blue;
+    margin-right: 0px;
 }
